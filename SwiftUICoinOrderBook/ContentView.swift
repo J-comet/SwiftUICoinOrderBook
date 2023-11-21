@@ -9,9 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var banner = "111,111,111원"
+//    @State private var banner = "111,111,111원"
+//    @State private var markets: [Market] = []
     
-    @State private var markets: [Market] = []
+    // Published 데이터를 전달하면 ObservedObject 가 받음
+    @ObservedObject var viewModel = ContentViewModel()
     
     var body: some View {
         NavigationStack {
@@ -34,7 +36,7 @@ struct ContentView: View {
                     //                    .safeAreaPadding([.horizontal], 40)
                     
                     LazyVStack {
-                        ForEach(markets, id: \.self) { data in
+                        ForEach(viewModel.markets, id: \.self) { data in
                             listView(data: data)
                         }
                     }
@@ -45,14 +47,14 @@ struct ContentView: View {
             .scrollIndicators(.hidden)
             .refreshable { // iOS15+
                 // 당겨서 새로고침
-                banner = "999,999,999원"
-//                markets = dummy.shuffled()
+                viewModel.fetchBanner()
+//                viewModel.banner = "999,999,999원"
             }
             .onAppear {
-                UpbitAPI.fetchAllMarket { data in
-                    markets = data
-                }
-//                markets = dummy.shuffled()
+                viewModel.fetchAllMarket()
+//                UpbitAPI.fetchAllMarket { data in
+//                    viewModel.markets = data
+//                }
             }
             .navigationTitle("My Wallet")
         }
@@ -61,7 +63,7 @@ struct ContentView: View {
     func bannerView() -> some View {
         ZStack {
             Rectangle()
-                .fill(Color.gray)
+                .fill(viewModel.banner.color)
                 .overlay {
                     Circle()
                         .fill(.white.opacity(0.3))
@@ -77,14 +79,14 @@ struct ContentView: View {
                 Spacer()
                 Text("나의 소비내역")
                     .font(.title3)
-                Text(banner)
+                Text(viewModel.banner.totalFormat)
                     .font(.title)
                     .bold()
             }
             // 애니매이션 효과 설정
-            .visualEffect { content, geometryProxy in
-                content.offset(x: scrollOffset(geometryProxy))
-            }
+//            .visualEffect { content, geometryProxy in
+//                content.offset(x: scrollOffset(geometryProxy))
+//            }
             .padding(.vertical)
             .frame(maxWidth: .infinity, alignment: .leading)
         }
@@ -113,6 +115,6 @@ struct ContentView: View {
     }
 }
 
-//#Preview {
-//    ContentView()
-//}
+#Preview {
+    ContentView()
+}

@@ -16,6 +16,7 @@
 		C0533BAD2B0C4A1F0001B862 /* OvelayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0533BAC2B0C4A1F0001B862 /* OvelayView.swift */; };
 		C0533BB02B0C4E690001B862 /* UpbitAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0533BAF2B0C4E690001B862 /* UpbitAPI.swift */; };
 		C0533BB22B0C4F500001B862 /* Market.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0533BB12B0C4F500001B862 /* Market.swift */; };
+		C0533BB42B0C59650001B862 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0533BB32B0C59650001B862 /* ContentViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		C0533BAC2B0C4A1F0001B862 /* OvelayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OvelayView.swift; sourceTree = "<group>"; };
 		C0533BAF2B0C4E690001B862 /* UpbitAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpbitAPI.swift; sourceTree = "<group>"; };
 		C0533BB12B0C4F500001B862 /* Market.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Market.swift; sourceTree = "<group>"; };
+		C0533BB32B0C59650001B862 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,13 +63,14 @@
 		C0533B872B0B89AD0001B862 /* SwiftUICoinOrderBook */ = {
 			isa = PBXGroup;
 			children = (
-				C0533BAE2B0C4E570001B862 /* Network */,
-				C0533B962B0B94A50001B862 /* Model */,
-				C0533B882B0B89AD0001B862 /* SwiftUICoinOrderBookApp.swift */,
 				C0533B8A2B0B89AD0001B862 /* ContentView.swift */,
-				C0533B8C2B0B89AE0001B862 /* Assets.xcassets */,
-				C0533B8E2B0B89AE0001B862 /* Preview Content */,
+				C0533BB32B0C59650001B862 /* ContentViewModel.swift */,
 				C0533BAC2B0C4A1F0001B862 /* OvelayView.swift */,
+				C0533B882B0B89AD0001B862 /* SwiftUICoinOrderBookApp.swift */,
+				C0533B8C2B0B89AE0001B862 /* Assets.xcassets */,
+				C0533B962B0B94A50001B862 /* Model */,
+				C0533BAE2B0C4E570001B862 /* Network */,
+				C0533B8E2B0B89AE0001B862 /* Preview Content */,
 			);
 			path = SwiftUICoinOrderBook;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0533BB42B0C59650001B862 /* ContentViewModel.swift in Sources */,
 				C0533B8B2B0B89AD0001B862 /* ContentView.swift in Sources */,
 				C0533B892B0B89AD0001B862 /* SwiftUICoinOrderBookApp.swift in Sources */,
 				C0533BB22B0C4F500001B862 /* Market.swift in Sources */,
