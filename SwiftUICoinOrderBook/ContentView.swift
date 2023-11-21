@@ -15,15 +15,22 @@ struct ContentView: View {
     // Published 데이터를 전달하면 ObservedObject 가 받음
     @ObservedObject var viewModel = ContentViewModel()
     
+    @State var renderingTestNum = 0
+    
     var body: some View {
         NavigationStack {
             ScrollView {
+                Text("테스트: \(renderingTestNum)")
+                NavigationLink("배너테스트", value: renderingTestNum)
                 VStack {
                     ScrollView(.horizontal) {
                         LazyHStack {
                             ForEach(1..<5) { data in
                                 bannerView()
                                     .containerRelativeFrame(.horizontal) // 디바이스 width 만큼 꽉차게 설정
+                                    .onTapGesture {
+                                        viewModel.fetchBanner()
+                                    }
                             }
                         }
                         // 1. 스크롤시 하나씩 넘기도록 설정
@@ -34,12 +41,8 @@ struct ContentView: View {
                     .scrollTargetBehavior(.viewAligned)
                     // 좌우 영역 살짝 보이도록 설정하기
                     //                    .safeAreaPadding([.horizontal], 40)
+                    ListView()
                     
-                    LazyVStack {
-                        ForEach(viewModel.markets, id: \.self) { data in
-                            listView(data: data)
-                        }
-                    }
                 }
             }
             // 부모뷰의 속성을 자식뷰도 공유해서 내부 스크롤뷰 인디케이터도 숨김처리
@@ -48,15 +51,17 @@ struct ContentView: View {
             .refreshable { // iOS15+
                 // 당겨서 새로고침
                 viewModel.fetchBanner()
-//                viewModel.banner = "999,999,999원"
-            }
-            .onAppear {
-                viewModel.fetchAllMarket()
-//                UpbitAPI.fetchAllMarket { data in
-//                    viewModel.markets = data
-//                }
+                renderingTestNum = Int.random(in: 0...100)
             }
             .navigationTitle("My Wallet")
+            .navigationDestination(for: Int.self) { item in
+                BannerTestView(testNumber: .constant(item))
+            }
+            // 위 navigationDestination 코드와 동일하게 동작
+//            .navigationDestination(for: Int.self) {
+//                BannerTestView(testNumber: .constant($renderingTestNum))
+//            }
+            
         }
     }
     
@@ -99,22 +104,8 @@ struct ContentView: View {
         return -result
     }
     
-    func listView(data: Market) -> some View {
-        HStack {
-            VStack(alignment: .leading) {
-//                Text(data.product)
-//                Text(data.category.rawValue)
-                Text(data.korean)
-                Text(data.english)
-            }
-            Spacer()
-            Text(data.market)
-        }
-        .padding(.horizontal, 20)
-        .padding(.vertical, 8)
-    }
 }
 
-#Preview {
-    ContentView()
-}
+//#Preview {
+//    ContentView()
+//}
