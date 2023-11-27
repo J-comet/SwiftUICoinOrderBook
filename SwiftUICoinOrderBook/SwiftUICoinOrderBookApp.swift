@@ -11,7 +11,7 @@ import SwiftUI
 struct SwiftUICoinOrderBookApp: App {
     var body: some Scene {
         WindowGroup {
-            SeSACView()
+            HorizontalView()
         }
     }
 }

@@ -23,6 +23,9 @@
 		C0685C0B2B1427170098BB49 /* MyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0685C0A2B1427170098BB49 /* MyTextField.swift */; };
 		C0685C0D2B1428570098BB49 /* SeSACView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0685C0C2B1428570098BB49 /* SeSACView.swift */; };
 		C0685C0F2B1428E70098BB49 /* MyWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0685C0E2B1428E70098BB49 /* MyWebView.swift */; };
+		C0685C122B1432700098BB49 /* HorizontalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0685C112B1432700098BB49 /* HorizontalView.swift */; };
+		C0685C142B1435790098BB49 /* HorizontalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0685C132B1435790098BB49 /* HorizontalData.swift */; };
+		C0685C162B143C810098BB49 /* HorizontalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0685C152B143C810098BB49 /* HorizontalViewModel.swift */; };
 		C08A8C9A2B0D85EE00A87717 /* WalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08A8C992B0D85EE00A87717 /* WalletView.swift */; };
 		C08A8C9D2B0D992300A87717 /* WalletDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08A8C9C2B0D992300A87717 /* WalletDetailView.swift */; };
 		C08A8C9F2B0DA54800A87717 /* WalletModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08A8C9E2B0DA54800A87717 /* WalletModel.swift */; };
@@ -46,6 +49,9 @@
 		C0685C0A2B1427170098BB49 /* MyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTextField.swift; sourceTree = "<group>"; };
 		C0685C0C2B1428570098BB49 /* SeSACView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeSACView.swift; sourceTree = "<group>"; };
 		C0685C0E2B1428E70098BB49 /* MyWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWebView.swift; sourceTree = "<group>"; };
+		C0685C112B1432700098BB49 /* HorizontalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalView.swift; sourceTree = "<group>"; };
+		C0685C132B1435790098BB49 /* HorizontalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalData.swift; sourceTree = "<group>"; };
+		C0685C152B143C810098BB49 /* HorizontalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalViewModel.swift; sourceTree = "<group>"; };
 		C08A8C992B0D85EE00A87717 /* WalletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletView.swift; sourceTree = "<group>"; };
 		C08A8C9C2B0D992300A87717 /* WalletDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletDetailView.swift; sourceTree = "<group>"; };
 		C08A8C9E2B0DA54800A87717 /* WalletModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletModel.swift; sourceTree = "<group>"; };
@@ -81,6 +87,7 @@
 		C0533B872B0B89AD0001B862 /* SwiftUICoinOrderBook */ = {
 			isa = PBXGroup;
 			children = (
+				C0685C102B14325F0098BB49 /* Horizontal */,
 				C0685C092B1426F10098BB49 /* WithUIKit */,
 				C08A8C9B2B0D991500A87717 /* Animation */,
 				C0533B8A2B0B89AD0001B862 /* ContentView.swift */,
@@ -140,6 +147,16 @@
 				C0685C0E2B1428E70098BB49 /* MyWebView.swift */,
 			);
 			path = WithUIKit;
+			sourceTree = "<group>";
+		};
+		C0685C102B14325F0098BB49 /* Horizontal */ = {
+			isa = PBXGroup;
+			children = (
+				C0685C112B1432700098BB49 /* HorizontalView.swift */,
+				C0685C132B1435790098BB49 /* HorizontalData.swift */,
+				C0685C152B143C810098BB49 /* HorizontalViewModel.swift */,
+			);
+			path = Horizontal;
 			sourceTree = "<group>";
 		};
 		C08A8C9B2B0D991500A87717 /* Animation */ = {
@@ -222,6 +239,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0685C122B1432700098BB49 /* HorizontalView.swift in Sources */,
+				C0685C142B1435790098BB49 /* HorizontalData.swift in Sources */,
+				C0685C162B143C810098BB49 /* HorizontalViewModel.swift in Sources */,
 				C0685C0B2B1427170098BB49 /* MyTextField.swift in Sources */,
 				C0533BB92B0C73520001B862 /* ListViewModel.swift in Sources */,
 				C0533BB42B0C59650001B862 /* ContentViewModel.swift in Sources */,
