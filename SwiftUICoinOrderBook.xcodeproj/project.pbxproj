@@ -20,6 +20,9 @@
 		C0533BB72B0C733D0001B862 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0533BB62B0C733D0001B862 /* ListView.swift */; };
 		C0533BB92B0C73520001B862 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0533BB82B0C73520001B862 /* ListViewModel.swift */; };
 		C0533BBB2B0C809F0001B862 /* BannerTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0533BBA2B0C809F0001B862 /* BannerTestView.swift */; };
+		C0685C0B2B1427170098BB49 /* MyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0685C0A2B1427170098BB49 /* MyTextField.swift */; };
+		C0685C0D2B1428570098BB49 /* SeSACView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0685C0C2B1428570098BB49 /* SeSACView.swift */; };
+		C0685C0F2B1428E70098BB49 /* MyWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0685C0E2B1428E70098BB49 /* MyWebView.swift */; };
 		C08A8C9A2B0D85EE00A87717 /* WalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08A8C992B0D85EE00A87717 /* WalletView.swift */; };
 		C08A8C9D2B0D992300A87717 /* WalletDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08A8C9C2B0D992300A87717 /* WalletDetailView.swift */; };
 		C08A8C9F2B0DA54800A87717 /* WalletModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08A8C9E2B0DA54800A87717 /* WalletModel.swift */; };
@@ -40,6 +43,9 @@
 		C0533BB62B0C733D0001B862 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		C0533BB82B0C73520001B862 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		C0533BBA2B0C809F0001B862 /* BannerTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerTestView.swift; sourceTree = "<group>"; };
+		C0685C0A2B1427170098BB49 /* MyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTextField.swift; sourceTree = "<group>"; };
+		C0685C0C2B1428570098BB49 /* SeSACView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeSACView.swift; sourceTree = "<group>"; };
+		C0685C0E2B1428E70098BB49 /* MyWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWebView.swift; sourceTree = "<group>"; };
 		C08A8C992B0D85EE00A87717 /* WalletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletView.swift; sourceTree = "<group>"; };
 		C08A8C9C2B0D992300A87717 /* WalletDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletDetailView.swift; sourceTree = "<group>"; };
 		C08A8C9E2B0DA54800A87717 /* WalletModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletModel.swift; sourceTree = "<group>"; };
@@ -75,6 +81,7 @@
 		C0533B872B0B89AD0001B862 /* SwiftUICoinOrderBook */ = {
 			isa = PBXGroup;
 			children = (
+				C0685C092B1426F10098BB49 /* WithUIKit */,
 				C08A8C9B2B0D991500A87717 /* Animation */,
 				C0533B8A2B0B89AD0001B862 /* ContentView.swift */,
 				C0533BB32B0C59650001B862 /* ContentViewModel.swift */,
@@ -123,6 +130,16 @@
 				C0533BBA2B0C809F0001B862 /* BannerTestView.swift */,
 			);
 			path = CustomVIew;
+			sourceTree = "<group>";
+		};
+		C0685C092B1426F10098BB49 /* WithUIKit */ = {
+			isa = PBXGroup;
+			children = (
+				C0685C0A2B1427170098BB49 /* MyTextField.swift */,
+				C0685C0C2B1428570098BB49 /* SeSACView.swift */,
+				C0685C0E2B1428E70098BB49 /* MyWebView.swift */,
+			);
+			path = WithUIKit;
 			sourceTree = "<group>";
 		};
 		C08A8C9B2B0D991500A87717 /* Animation */ = {
@@ -205,13 +222,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0685C0B2B1427170098BB49 /* MyTextField.swift in Sources */,
 				C0533BB92B0C73520001B862 /* ListViewModel.swift in Sources */,
 				C0533BB42B0C59650001B862 /* ContentViewModel.swift in Sources */,
 				C0533B8B2B0B89AD0001B862 /* ContentView.swift in Sources */,
+				C0685C0D2B1428570098BB49 /* SeSACView.swift in Sources */,
 				C0533B892B0B89AD0001B862 /* SwiftUICoinOrderBookApp.swift in Sources */,
 				C0533BB22B0C4F500001B862 /* Market.swift in Sources */,
 				C0533BBB2B0C809F0001B862 /* BannerTestView.swift in Sources */,
 				C0533BB02B0C4E690001B862 /* UpbitAPI.swift in Sources */,
+				C0685C0F2B1428E70098BB49 /* MyWebView.swift in Sources */,
 				C08A8C9D2B0D992300A87717 /* WalletDetailView.swift in Sources */,
 				C08A8C9F2B0DA54800A87717 /* WalletModel.swift in Sources */,
 				C0533B9A2B0B94B90001B862 /* Money.swift in Sources */,
