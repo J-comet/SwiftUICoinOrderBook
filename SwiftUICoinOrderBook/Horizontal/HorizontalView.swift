@@ -9,29 +9,31 @@ import SwiftUI
 
 struct HorizontalView: View {
     
-    @StateObject var viewModel = HorizontalViewModel()
+    @StateObject var viewModel = HorizontalViewModel(market: Market(market: "krw=btc", korean: "비트코인", english: "Bitcoin"))
     
     var body: some View {
         ScrollView {
             
-            Text("\(viewModel.value)")
+            Text(viewModel.market.korean)
             // 디바이스 기준으로 계산
             GeometryReader { proxy in
                 
-                let grapWidth = proxy.size.width
-                
+                let grapWidth = proxy.size.width * 0.7
                 VStack {
-                    ForEach(horizontalDummy, id:\.id) { item in
+                    ForEach(viewModel.askOrdersBook, id:\.id) { item in
                         HStack {
-                            Text(item.data)
-                                .frame(maxWidth: proxy.size.width * 0.2)
+                            Text(item.price.formatted())
+                                .frame(maxWidth: proxy.size.width * 0.25)
                             ZStack(alignment: .leading) {
-                                Rectangle()
-                                    .foregroundStyle(Color.blue.opacity(0.4))
-                                    .frame(width: CGFloat(item.point) / 10)
-                                    .frame(maxWidth: grapWidth * 0.7)
                                 
-                                Text(item.point.formatted())
+                                let graphSize = item.size / viewModel.largetAskSize() * grapWidth
+                                
+                                Rectangle()
+                                    .foregroundStyle(Color.blue.opacity(0.3))
+                                    .frame(maxWidth: graphSize, alignment: .leading)
+                                                                
+                                Text(item.size.formatted())
+                                    .frame(width: grapWidth)
                             }
                             .frame(maxWidth: .infinity)
                             .background(Color.gray)
@@ -39,15 +41,17 @@ struct HorizontalView: View {
                         .frame(height: 40)
                     }
                 }
-                .onTapGesture {
-                    viewModel.timer()
-                    print(proxy)
-                    print(proxy.size)
-                    print(largest())
-                }
+                .background(Color.green)
             }
             
+        }
+        .onAppear {
+            viewModel.timer()
+            viewModel.fetchAllMarket()
         }
     }
 }
 
+//#Preview {
+//    HorizontalView()
+//}
