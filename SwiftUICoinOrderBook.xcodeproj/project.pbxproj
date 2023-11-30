@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C02028B62B16D223008FB1EA /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C02028B52B16D223008FB1EA /* WidgetKit.framework */; };
+		C02028B82B16D223008FB1EA /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C02028B72B16D223008FB1EA /* SwiftUI.framework */; };
+		C02028BB2B16D223008FB1EA /* WidgetOrderBookBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02028BA2B16D223008FB1EA /* WidgetOrderBookBundle.swift */; };
+		C02028BD2B16D223008FB1EA /* WidgetOrderBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02028BC2B16D223008FB1EA /* WidgetOrderBook.swift */; };
+		C02028BF2B16D224008FB1EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C02028BE2B16D224008FB1EA /* Assets.xcassets */; };
+		C02028C32B16D224008FB1EA /* WigetOrderBookExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C02028B32B16D223008FB1EA /* WigetOrderBookExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C0533B892B0B89AD0001B862 /* SwiftUICoinOrderBookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0533B882B0B89AD0001B862 /* SwiftUICoinOrderBookApp.swift */; };
 		C0533B8B2B0B89AD0001B862 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0533B8A2B0B89AD0001B862 /* ContentView.swift */; };
 		C0533B8D2B0B89AE0001B862 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0533B8C2B0B89AE0001B862 /* Assets.xcassets */; };
@@ -27,12 +33,48 @@
 		C0685C142B1435790098BB49 /* HorizontalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0685C132B1435790098BB49 /* HorizontalData.swift */; };
 		C0685C162B143C810098BB49 /* HorizontalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0685C152B143C810098BB49 /* HorizontalViewModel.swift */; };
 		C0685C182B157F4F0098BB49 /* OrderBookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0685C172B157F4F0098BB49 /* OrderBookModel.swift */; };
+		C082CA012B1819A7004C53B3 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C082C9FF2B18192D004C53B3 /* Provider.swift */; };
+		C082CA042B181A48004C53B3 /* SimpleEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = C082CA032B181A48004C53B3 /* SimpleEntry.swift */; };
+		C082CA062B181A8B004C53B3 /* WidgetOrderBookEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C082CA052B181A8B004C53B3 /* WidgetOrderBookEntryView.swift */; };
+		C082CA0A2B18204F004C53B3 /* UserDefaultsGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C082CA092B18204F004C53B3 /* UserDefaultsGroup.swift */; };
+		C082CA0B2B18204F004C53B3 /* UserDefaultsGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C082CA092B18204F004C53B3 /* UserDefaultsGroup.swift */; };
 		C08A8C9A2B0D85EE00A87717 /* WalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08A8C992B0D85EE00A87717 /* WalletView.swift */; };
 		C08A8C9D2B0D992300A87717 /* WalletDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08A8C9C2B0D992300A87717 /* WalletDetailView.swift */; };
 		C08A8C9F2B0DA54800A87717 /* WalletModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08A8C9E2B0DA54800A87717 /* WalletModel.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C02028C12B16D224008FB1EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C0533B7D2B0B89AD0001B862 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C02028B22B16D223008FB1EA;
+			remoteInfo = WigetOrderBookExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C02028C42B16D224008FB1EA /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C02028C32B16D224008FB1EA /* WigetOrderBookExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		C02028B32B16D223008FB1EA /* WigetOrderBookExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WigetOrderBookExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C02028B52B16D223008FB1EA /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		C02028B72B16D223008FB1EA /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		C02028BA2B16D223008FB1EA /* WidgetOrderBookBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetOrderBookBundle.swift; sourceTree = "<group>"; };
+		C02028BC2B16D223008FB1EA /* WidgetOrderBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetOrderBook.swift; sourceTree = "<group>"; };
+		C02028BE2B16D224008FB1EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C02028C02B16D224008FB1EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0533B852B0B89AD0001B862 /* SwiftUICoinOrderBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUICoinOrderBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0533B882B0B89AD0001B862 /* SwiftUICoinOrderBookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUICoinOrderBookApp.swift; sourceTree = "<group>"; };
 		C0533B8A2B0B89AD0001B862 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,12 +96,27 @@
 		C0685C132B1435790098BB49 /* HorizontalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalData.swift; sourceTree = "<group>"; };
 		C0685C152B143C810098BB49 /* HorizontalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalViewModel.swift; sourceTree = "<group>"; };
 		C0685C172B157F4F0098BB49 /* OrderBookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderBookModel.swift; sourceTree = "<group>"; };
+		C082C9FF2B18192D004C53B3 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
+		C082CA032B181A48004C53B3 /* SimpleEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleEntry.swift; sourceTree = "<group>"; };
+		C082CA052B181A8B004C53B3 /* WidgetOrderBookEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetOrderBookEntryView.swift; sourceTree = "<group>"; };
+		C082CA072B181EB8004C53B3 /* SwiftUICoinOrderBook.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftUICoinOrderBook.entitlements; sourceTree = "<group>"; };
+		C082CA082B181FC0004C53B3 /* WigetOrderBookExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WigetOrderBookExtension.entitlements; sourceTree = "<group>"; };
+		C082CA092B18204F004C53B3 /* UserDefaultsGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsGroup.swift; sourceTree = "<group>"; };
 		C08A8C992B0D85EE00A87717 /* WalletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletView.swift; sourceTree = "<group>"; };
 		C08A8C9C2B0D992300A87717 /* WalletDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletDetailView.swift; sourceTree = "<group>"; };
 		C08A8C9E2B0DA54800A87717 /* WalletModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C02028B02B16D223008FB1EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C02028B82B16D223008FB1EA /* SwiftUI.framework in Frameworks */,
+				C02028B62B16D223008FB1EA /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C0533B822B0B89AD0001B862 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -70,10 +127,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C02028B42B16D223008FB1EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C02028B52B16D223008FB1EA /* WidgetKit.framework */,
+				C02028B72B16D223008FB1EA /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C02028B92B16D223008FB1EA /* WigetOrderBook */ = {
+			isa = PBXGroup;
+			children = (
+				C082CA022B181A20004C53B3 /* Entry */,
+				C082C9FE2B181913004C53B3 /* Provider */,
+				C02028BA2B16D223008FB1EA /* WidgetOrderBookBundle.swift */,
+				C02028BC2B16D223008FB1EA /* WidgetOrderBook.swift */,
+				C02028BE2B16D224008FB1EA /* Assets.xcassets */,
+				C02028C02B16D224008FB1EA /* Info.plist */,
+			);
+			path = WigetOrderBook;
+			sourceTree = "<group>";
+		};
 		C0533B7C2B0B89AD0001B862 = {
 			isa = PBXGroup;
 			children = (
+				C082CA082B181FC0004C53B3 /* WigetOrderBookExtension.entitlements */,
 				C0533B872B0B89AD0001B862 /* SwiftUICoinOrderBook */,
+				C02028B92B16D223008FB1EA /* WigetOrderBook */,
+				C02028B42B16D223008FB1EA /* Frameworks */,
 				C0533B862B0B89AD0001B862 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -82,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				C0533B852B0B89AD0001B862 /* SwiftUICoinOrderBook.app */,
+				C02028B32B16D223008FB1EA /* WigetOrderBookExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -89,6 +172,7 @@
 		C0533B872B0B89AD0001B862 /* SwiftUICoinOrderBook */ = {
 			isa = PBXGroup;
 			children = (
+				C082CA072B181EB8004C53B3 /* SwiftUICoinOrderBook.entitlements */,
 				C0685C102B14325F0098BB49 /* Horizontal */,
 				C0685C092B1426F10098BB49 /* WithUIKit */,
 				C08A8C9B2B0D991500A87717 /* Animation */,
@@ -101,6 +185,7 @@
 				C0533B962B0B94A50001B862 /* Model */,
 				C0533BAE2B0C4E570001B862 /* Network */,
 				C0533B8E2B0B89AE0001B862 /* Preview Content */,
+				C082CA092B18204F004C53B3 /* UserDefaultsGroup.swift */,
 			);
 			path = SwiftUICoinOrderBook;
 			sourceTree = "<group>";
@@ -162,6 +247,23 @@
 			path = Horizontal;
 			sourceTree = "<group>";
 		};
+		C082C9FE2B181913004C53B3 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				C082C9FF2B18192D004C53B3 /* Provider.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		C082CA022B181A20004C53B3 /* Entry */ = {
+			isa = PBXGroup;
+			children = (
+				C082CA032B181A48004C53B3 /* SimpleEntry.swift */,
+				C082CA052B181A8B004C53B3 /* WidgetOrderBookEntryView.swift */,
+			);
+			path = Entry;
+			sourceTree = "<group>";
+		};
 		C08A8C9B2B0D991500A87717 /* Animation */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +277,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C02028B22B16D223008FB1EA /* WigetOrderBookExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C02028C72B16D224008FB1EA /* Build configuration list for PBXNativeTarget "WigetOrderBookExtension" */;
+			buildPhases = (
+				C02028AF2B16D223008FB1EA /* Sources */,
+				C02028B02B16D223008FB1EA /* Frameworks */,
+				C02028B12B16D223008FB1EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WigetOrderBookExtension;
+			productName = WigetOrderBookExtension;
+			productReference = C02028B32B16D223008FB1EA /* WigetOrderBookExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		C0533B842B0B89AD0001B862 /* SwiftUICoinOrderBook */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C0533B932B0B89AE0001B862 /* Build configuration list for PBXNativeTarget "SwiftUICoinOrderBook" */;
@@ -182,10 +301,12 @@
 				C0533B812B0B89AD0001B862 /* Sources */,
 				C0533B822B0B89AD0001B862 /* Frameworks */,
 				C0533B832B0B89AD0001B862 /* Resources */,
+				C02028C42B16D224008FB1EA /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C02028C22B16D224008FB1EA /* PBXTargetDependency */,
 			);
 			name = SwiftUICoinOrderBook;
 			productName = SwiftUICoinOrderBook;
@@ -202,6 +323,9 @@
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
+					C02028B22B16D223008FB1EA = {
+						CreatedOnToolsVersion = 15.0;
+					};
 					C0533B842B0B89AD0001B862 = {
 						CreatedOnToolsVersion = 15.0;
 					};
@@ -221,11 +345,20 @@
 			projectRoot = "";
 			targets = (
 				C0533B842B0B89AD0001B862 /* SwiftUICoinOrderBook */,
+				C02028B22B16D223008FB1EA /* WigetOrderBookExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C02028B12B16D223008FB1EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C02028BF2B16D224008FB1EA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C0533B832B0B89AD0001B862 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -238,6 +371,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C02028AF2B16D223008FB1EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C082CA042B181A48004C53B3 /* SimpleEntry.swift in Sources */,
+				C02028BD2B16D223008FB1EA /* WidgetOrderBook.swift in Sources */,
+				C082CA062B181A8B004C53B3 /* WidgetOrderBookEntryView.swift in Sources */,
+				C082CA012B1819A7004C53B3 /* Provider.swift in Sources */,
+				C082CA0B2B18204F004C53B3 /* UserDefaultsGroup.swift in Sources */,
+				C02028BB2B16D223008FB1EA /* WidgetOrderBookBundle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C0533B812B0B89AD0001B862 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -252,6 +398,7 @@
 				C0533B8B2B0B89AD0001B862 /* ContentView.swift in Sources */,
 				C0685C0D2B1428570098BB49 /* SeSACView.swift in Sources */,
 				C0533B892B0B89AD0001B862 /* SwiftUICoinOrderBookApp.swift in Sources */,
+				C082CA0A2B18204F004C53B3 /* UserDefaultsGroup.swift in Sources */,
 				C0533BB22B0C4F500001B862 /* Market.swift in Sources */,
 				C0533BBB2B0C809F0001B862 /* BannerTestView.swift in Sources */,
 				C0533BB02B0C4E690001B862 /* UpbitAPI.swift in Sources */,
@@ -268,7 +415,71 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		C02028C22B16D224008FB1EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C02028B22B16D223008FB1EA /* WigetOrderBookExtension */;
+			targetProxy = C02028C12B16D224008FB1EA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		C02028C52B16D224008FB1EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = WigetOrderBookExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SV3K237PCX;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WigetOrderBook/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WigetOrderBook;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.comet.SwiftUICoinOrderBook.WigetOrderBook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C02028C62B16D224008FB1EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = WigetOrderBookExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SV3K237PCX;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WigetOrderBook/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WigetOrderBook;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.comet.SwiftUICoinOrderBook.WigetOrderBook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		C0533B912B0B89AE0001B862 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -391,8 +602,10 @@
 		C0533B942B0B89AE0001B862 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SwiftUICoinOrderBook/SwiftUICoinOrderBook.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUICoinOrderBook/Preview Content\"";
@@ -420,8 +633,10 @@
 		C0533B952B0B89AE0001B862 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SwiftUICoinOrderBook/SwiftUICoinOrderBook.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUICoinOrderBook/Preview Content\"";
@@ -449,6 +664,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C02028C72B16D224008FB1EA /* Build configuration list for PBXNativeTarget "WigetOrderBookExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C02028C52B16D224008FB1EA /* Debug */,
+				C02028C62B16D224008FB1EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C0533B802B0B89AD0001B862 /* Build configuration list for PBXProject "SwiftUICoinOrderBook" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

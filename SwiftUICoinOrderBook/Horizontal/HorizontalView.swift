@@ -6,10 +6,11 @@
 //
 
 import SwiftUI
+import WidgetKit
 
 struct HorizontalView: View {
     
-    @StateObject var viewModel = HorizontalViewModel(market: Market(market: "krw=btc", korean: "비트코인", english: "Bitcoin"))
+    @StateObject var viewModel = HorizontalViewModel(market: Market(market: "krw-btc", korean: "비트코인", english: "Bitcoin"))
     
     var body: some View {
         ScrollView {
@@ -47,7 +48,18 @@ struct HorizontalView: View {
         }
         .onAppear {
             viewModel.timer()
-            viewModel.fetchAllMarket()
+            // UserDefaults AppGroup 에 데이터 저장
+            print(UserDefaults.groupShared.string(forKey: "Market"))
+            UserDefaults.groupShared.set(viewModel.market.korean, forKey: "Market")
+            print(UserDefaults.groupShared.string(forKey: "Market"))
+            
+            // 원하는 시점에 데이터를 갱신시켜주기 위해 위젯센터 이용
+            // 1. import WidgetKit
+            // 2. 위젯센터 호출
+            // 3. 위젯의 고유한 문자열로 특정 위젯 갱신 요청
+            
+            WidgetCenter.shared.reloadTimelines(ofKind: "WigetOrderBook")
+            
         }
     }
 }
